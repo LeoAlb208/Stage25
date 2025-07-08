@@ -1,10 +1,10 @@
-# YoroiPhish
+# Stage25
 
 ## 🔍 Sistema avanzato di rilevamento phishing
 
 ### 🚀 Introduzione:
 
-YoroiPhish è un sistema avanzato di rilevamento phishing che combina tecniche di machine learning, analisi strutturale, elaborazione del linguaggio naturale e visione artificiale per identificare siti web malevoli con elevata precisione.
+Stage25 è un sistema avanzato di rilevamento phishing che combina tecniche di machine learning, analisi strutturale, elaborazione del linguaggio naturale e visione artificiale per identificare siti web malevoli con elevata precisione.
 
 **Obiettivi:**
 - Sviluppare un sistema multi-livello per il rilevamento automatico di siti phishing
@@ -21,7 +21,7 @@ Il nostro approccio si basa su tre pilastri fondamentali:
 Questi tre livelli di analisi vengono integrati attraverso un sistema di ensemble ottimizzato che bilancia i punteggi di ciascun modello per massimizzare precisione e recall.
 
 **Utilizzo:**
-YoroiPhish è progettato per funzionare sia come sistema di monitoraggio continuo che per analisi puntuali:
+Stage25 è progettato per funzionare sia come sistema di monitoraggio continuo che per analisi puntuali:
 - Può essere integrato in soluzioni di sicurezza esistenti per la protezione di organizzazioni
 - Consente l'analisi di URL sospetti in tempo reale
 - Fornisce report dettagliati con spiegazione delle caratteristiche più significative
@@ -148,7 +148,7 @@ e questo avrebbe potuto minare la capacità del modello di lavorare solo ed escl
   - Implementazione di regole di decisione personalizzate
   
 - **Test e validazione**:
-  - Valutazione su dataset Yoroi indipendente
+  - Valutazione su dataset Stage25 indipendente
   - Test real-time su URL forniti dall'utente
   - Generazione di report dettagliati con analisi delle feature critiche
 
@@ -246,8 +246,8 @@ Per finire abbiamo implementato le API necessarie all'utilizzo di questo sistema
       Visualizzazione della **confusion matrix** per l'ensemble finale.  
       Esportazione della configurazione del **modello di ensemble** finale in **[ensemble_model_config.json](models\ensemble\ensemble_model_config.json)**.
 
-7. **TEST SUL DATASET YOROI**  
-  Dalla **cella 83 alla 97** del [main](main.ipynb) abbiamo scaricato e preprocessato i dati relativi ai siti presenti nel **dataset Yoroi**, e infine abbiamo fatto le predizioni ottenendo un risultato che indica un *gran numero di siti di phishing* in confronto a quelli legittimi.
+7. **TEST SUL DATASET Stage25**  
+  Dalla **cella 83 alla 97** del [main](main.ipynb) abbiamo scaricato e preprocessato i dati relativi ai siti presenti nel **dataset Stage25**, e infine abbiamo fatto le predizioni ottenendo un risultato che indica un *gran numero di siti di phishing* in confronto a quelli legittimi.
 
 ## 🤔 Come utilizzarlo?
 1️⃣ Un nuovo URL sospetto viene scaricato e analizzato  
