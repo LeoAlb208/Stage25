@@ -1,0 +1,27 @@
+{
+    "description": "Configurazione del modello ensemble con soglia media e regole di override.",
+    "model_paths": {
+        "rf": "models\\random_forest.pkl",
+        "bert": "models\\bert",
+        "cnn": "models\\cnn\\phishing_cnn_model.h5"
+    },
+    "ensemble_parameters": {
+        "avg_prediction_threshold": 0.6,
+        "rules": {
+            "rf_direct_phishing": {
+                "condition": "rf_prob > threshold",
+                "rf_threshold": 0.8
+            },
+            "cnn_rf_phishing": {
+                "condition": "cnn_prob > cnn_threshold AND rf_prob > rf_threshold",
+                "cnn_threshold": 0.99,
+                "rf_threshold": 0.5
+            },
+            "bert_rf_phishing": {
+                "condition": "bert_prob > bert_threshold AND rf_prob > rf_threshold",
+                "bert_threshold": 0.99,
+                "rf_threshold": 0.5
+            }
+        }
+    }
+}

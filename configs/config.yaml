@@ -1,0 +1,44 @@
+# config.yaml
+paths:
+  data: "data/"
+  raw_phishing: "data/raw/phishing/"
+  raw_legit: "data/raw/legit/"
+  raw_test: "data/raw/test/"
+  processed: "data/processed/"
+  processed_phishing: "data/processed/phishing/"
+  processed_legit: "data/processed/legit/"
+  trainingdata: "data/trainingdata/"
+  external: "data/external/"
+  shorteners: "data/external/shorteners.go"
+  results: "data/results/"
+  models: "models/"
+  ensemble_config: "models/ensemble/ensemble_model_config.json"
+  screenshots: "data/raw/screenshots/"
+  screenshots_legit: "data/raw/screenshots/legit/"
+  screenshots_phishing: "data/raw/screenshots/phishing/"
+  test_screenshots_legit: "data/raw/screenshots/test_legit/"
+  test_screenshots_phishing: "data/raw/screenshots/test_phishing/"
+  screenshots_results: "data/results/screenshot_results.csv"
+  test_screenshots_results: "data/results/test_screenshot_results.csv"
+
+data_collection:
+  tranco_file: "data/external/top10k.csv"
+  phish_file: "data/external/phish_score_cleaned.csv"
+  phishing_sites:
+    request_delay: 2
+    max_retries: 3
+  commoncrawl_api: "http://index.commoncrawl.org/CC-MAIN-2024-10-index?url=*.{}&output=json"
+  legit_sites:
+    urls_file: "data/raw/legit/downloaded_urls.txt"
+    limit_per_domain: 3
+    request_delay: 1
+    max_filename_length: 150
+
+logging:
+  level: INFO
+  file: "logs/app.log"
+
+dashboard_api:
+  host: "127.0.0.1"
+  port: 5000
+  debug: true

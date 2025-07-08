@@ -1,0 +1,92 @@
+Attuale:
+
+
+mlp_model = MLPClassifier(
+        hidden_layer_sizes=(256, 128, 64),  # 3 hidden layers with decreasing sizes
+        activation='relu',
+        solver='adam',
+        alpha=0.0001,  # L2 regularization parameter
+        batch_size='auto',
+        learning_rate='adaptive',
+        learning_rate_init=0.001,
+        max_iter=1000,
+        early_stopping=False,  # No early stopping when training on full dataset
+        random_state=random_state
+    )
+
+
+🧠 Addestramento del modello Multi-layer Perceptron...
+Predict su dataset di test
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.86      0.89       145
+           1       0.62      0.73      0.67        44
+
+    accuracy                           0.83       189
+   macro avg       0.76      0.79      0.78       189
+weighted avg       0.84      0.83      0.84       189
+
+
+Confusion Matrix:
+[[125  20]
+ [ 12  32]]
+
+Top 10 Most Important Features:
+                      feature  importance
+26  f27_ratio_digits_hostname   43.977217
+5                       f6_at   43.896390
+54         f55_suspicious_tld   42.276991
+79           f80_has_ssl_seal   40.854120
+33          f34_prefix_suffix   40.689318
+36         f37_path_extension   37.550466
+81         f82_data_uri_count   35.728811
+52     f53_brand_in_subdomain   33.721600
+27               f28_punycode   33.320380
+20                    f21_www   31.058596
+
+
+
+
+Provati: (128, 64), (128, 64, 32), (512, 256, 128, 64), (512, 256, 128), early_stopping=True, activation='logistic', alpha=0.001, alpha=0.00001, lbfgs, sgd
+
+
+
+
+Con activation='tanh'
+
+
+
+🧠 Addestramento del modello Multi-layer Perceptron...
+Predict su dataset di test
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.89      0.91       145
+           1       0.67      0.75      0.71        44
+
+    accuracy                           0.86       189
+   macro avg       0.80      0.82      0.81       189
+weighted avg       0.86      0.86      0.86       189
+
+
+Confusion Matrix:
+[[129  16]
+ [ 11  33]]
+
+Top 10 Most Important Features:
+                      feature  importance
+36         f37_path_extension   36.342040
+26  f27_ratio_digits_hostname   35.786690
+81         f82_data_uri_count   35.757854
+54         f55_suspicious_tld   32.627762
+20                    f21_www   29.250517
+5                       f6_at   29.177325
+52     f53_brand_in_subdomain   28.558142
+79           f80_has_ssl_seal   28.422766
+69               f70_h1_count   26.991551
+68      f69_language_mismatch   26.185531
+
+
+
+Provati: (128, 64), (128, 64) e early_stopping=True, early_stopping=True

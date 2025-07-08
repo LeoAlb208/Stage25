@@ -1,0 +1,26 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.vscode/
+.idea/
+data/raw/legit/
+data/raw/phishing/
+data/raw/screenshots/legit/
+data/raw/screenshots/phishing/
+data/raw/screenshots/test_legit
+data/raw/screenshots/test_phishing
+data/processed/screenshots/
+data/processed/screenshots_split
+data/raw/test/
+data/external/models
+2025-03-21_2025-03-23_2025-03-25_all_domains.zip
+2025-03-21_2025-03-23_2025-03-25_all_domains
+venv/
+temp/
+.DS_Store
+
+# cache e estensione degli screenshot
+downloaded_files/
